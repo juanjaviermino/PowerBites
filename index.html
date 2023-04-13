@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+    <head> <!-- cabeza de la página -->
+        <title>
+            Power Bites
+        </title>                      <!-- This is a comment; texto en pestaña-->
+        <link rel="website icon" href="./logoicon.png">
+        <link rel="stylesheet" href="style.css">    <!--line 6 connects to styling file-->
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Eczar'>
+        <script src="main.js"></script>
+        <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Open Sans:wght@400;600;700&display=swap"
+        />
+        <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@700;800&display=swap"/>
+    </head>
+
+    <body> <!-- cuerpo de la página-->
+        <div class="grid-container">
+            <div class="header">
+                <img class="logo" alt="" src="./logo.jpg" />
+                <div class="headeritemparent">
+                    <div class="headeritem">¡Bienvenidos a nuestra página!</div>
+                </div>
+            </div>
+
+            <div class="body">
+                <div class="videocontainer">
+                    <video autoplay muted loop id="player">
+                        <source src="./cookies.mp4" type="video/mp4"/>
+                    </video>
+                </div>
+                <div class="content">
+                    <div class="informacion">
+                        <div class="infoitem">
+                            <h1>
+                                Misión
+                            </h1>
+                            <p>
+                                Nuestra misión con Power Bites es ofrecer una opción de refrigerio saludable para los deportistas, que proporcione proteínas y otros ingredientes saludables. El objetivo es crear y ofrecer una galleta nutritiva fácil de consumir para nuestros clientes, en este caso los deportistas, que les sirva como suplemento de proteínas y energía antes o después de un entrenamiento o actividad física. Nuestro equipo se compromete a utilizar ingredientes saludables que puedan recargar las baterías y regenerar la masa muscular.
+                            </p>
+                        </div>
+                        <div class="infoitem">
+                            <h1>
+                                Visión
+                            </h1>
+                            <p>
+                                Nuestra visión con Power Bites es convertirnos en una marca reconocida a nivel nacional por el sabor, valor nutricional y la contribución que ofrecemos a los deportistas. Queremos seguir innovando con nuevos sabores de galletas en el futuro que satisfagan las necesidades de los deportistas.
+                            </p>
+                        </div>
+                        <div class="infoitem">
+                            <h1>
+                                Producto
+                            </h1>
+                            <p>
+                                Nuestro producto Power Bites tiene como objetivo proporcionar energía a nuestros consumidores. Viene envasado en frascos de vidrio y las galletas tienen un tamaño mínimo. Están fabricadas con proteínas, conservantes y vitaminas para el bienestar de nuestros clientes. Están compuestas de avena, limón y frutos secos.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="calculadora">
+                        <div class="instrucciones">
+                            <h1>
+                                BMI (Body Mass Index) Calculator
+                            </h1>
+                            <p>
+                                In order to calculate your BMI, please input your weight in kilograms and your height in meters:
+                            </p>
+                        </div>
+                        <div class="input_fields">
+                            <div class="field_container">
+                                <label for="weight">Weight (kg): </label>
+                                <input type= "text", id="weight"/>
+                            </div>
+                            <div class="field_container">
+                                <label for="height">Height (m): </label>
+                                <input type= "text", id="height"/>
+                            </div>
+                            <div class="button_container">
+                                <input type="submit" id="BMI_btn" value="Calculate BMI" onclick="BMI_calculator()">
+                            </div>
+                        </div>  
+                        <div class="output" id="output_container">
+                            Tu resultado aparecerá aquí
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer">
+                <div class="bloque1">
+                    <p>
+                        Nuestro equipo
+                    </p>
+                    <div class="imagescontainer">
+                        <div class="circle">
+                            <img class="profpic" alt="" src="./isa.jpg" />
+                        </div>
+                        <div class="circle">
+                            <img class="profpic" alt="" src="./sebas.jpg" />
+                        </div>
+                        <div class="circle">
+                            <img class="profpic" alt="" src="./juli.jpg" />
+                        </div>
+                        <div class="circle">
+                            <img class="profpic" alt="" src="./nico.jpg" />
+                        </div>
+                        <div class="circle">
+                            <img class="profpic" alt="" src="./mia.jpg" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bloque2">
+                    <p>
+                        Completa nuestra encuesta:
+                    </p>
+                    <div class="imagescontainer">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLScvFxnQ78Re5kn7pcu8HxKkuo3wuN8K1wOk6T0zz_mJvCZJGQ/viewform?usp=sf_link " target="_blank">
+                            <div class="circle">
+                                <img class="profpic" alt="" src="./encuestalogo.jpeg" />
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bloque3">
+                    <p>
+                        Para más información sobre BMI:
+                    </p>
+                    <div class="imagescontainer">
+                        <a href="https://www.who.int/data/gho/data/themes/topics/topic-details/GHO/body-mass-index" target="_blank">
+                            <div class="circle">
+                                <img class="profpic" alt="" src="whologo3.png" />
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>
