@@ -32,15 +32,30 @@ function BMI_calculator(){
     } 
                  // Calculates the IMC using height and weight
     
-    const node = document.createTextNode("Tu BMI es igual a "+ strBMI +", lo cual indica que tu estado es: " + status); // Create a child node where text will be stored 
+    const node = document.createTextNode("Tu IMC es igual a "+ strBMI +", lo cual indica que tu estado es: " + status); // Create a child node where text will be stored 
     const para = document.createElement("p");                     // Creates a <p> element for later use
     para.appendChild(node);                                       // Insert child node into parent node, that is, <p>
     const output = document.getElementById("output_container");   // Access the empty container <div> where <p> will be included 
     output.appendChild(para);                                // Transform variable 'Imc' from float to string. 
                                        // Insert <p> into <div>
-
-    
 }
+
+function calcularGET() {
+    var peso = document.getElementById("peso").value;
+    var altura = document.getElementById("altura").value;
+    var edad = document.getElementById("edad").value;
+    var genero = document.querySelector('input[name="genero"]:checked').value;
+    var actividad = document.getElementById("actividad").value;
+    var ger;
+    if (genero == "masculino") {
+        ger = 66.4730 + (13.7516 * peso) + (5.0033 * altura) - (6.7550 * edad);
+    } else{
+        ger = 655.0955 + (9.5634 * peso) + (1.8449 * altura) - (4.6756 * edad);
+    }
+    var get = ger * actividad;
+    document.getElementById("resultado").innerHTML = "Tu GET es igual a " + get.toFixed(2) + " kcal";
+}
+
 
 
 
