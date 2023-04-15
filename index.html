@@ -40,7 +40,7 @@
                                 Misión
                             </h1>
                             <p>
-                                Nuestra misión con Power Bites es ofrecer una opción de refrigerio saludable para los deportistas, que proporcione proteínas y otros ingredientes saludables. El objetivo es crear y ofrecer una galleta nutritiva fácil de consumir para nuestros clientes, en este caso los deportistas, que les sirva como suplemento de proteínas y energía antes o después de un entrenamiento o actividad física. Nuestro equipo se compromete a utilizar ingredientes saludables que puedan recargar las baterías y regenerar la masa muscular.
+                                En Power Bites nos enfocamos en ofrecer una opción de refrigerio saludable para deportistas, con una galleta nutritiva y fácil de consumir que sirva como suplemento de proteínas y energía antes o después de una actividad física. Utilizamos ingredientes saludables y de calidad para recargar las baterías y regenerar la masa muscular, con el objetivo de ayudar a nuestros clientes a alcanzar sus metas deportivas.
                             </p>
                         </div>
                         <div class="infoitem">
@@ -48,7 +48,7 @@
                                 Visión
                             </h1>
                             <p>
-                                Nuestra visión con Power Bites es convertirnos en una marca reconocida a nivel nacional por el sabor, valor nutricional y la contribución que ofrecemos a los deportistas. Queremos seguir innovando con nuevos sabores de galletas en el futuro que satisfagan las necesidades de los deportistas.
+                                En Power Bites nuestra visión es consolidarnos como una marca líder reconocida a nivel nacional por nuestro sabor, valor nutricional y contribución a la comunidad deportiva. Como parte de nuestra constante innovación, buscamos desarrollar nuevos sabores de galletas que satisfagan las necesidades de los deportistas y mejoren su experiencia con nuestros productos. Estamos comprometidos en seguir evolucionando y ofreciendo opciones de refrigerio saludable y nutritivas para nuestros clientes.
                             </p>
                         </div>
                         <div class="infoitem">
@@ -56,34 +56,89 @@
                                 Producto
                             </h1>
                             <p>
-                                Nuestro producto Power Bites tiene como objetivo proporcionar energía a nuestros consumidores. Viene envasado en frascos de vidrio y las galletas tienen un tamaño mínimo. Están fabricadas con proteínas, conservantes y vitaminas para el bienestar de nuestros clientes. Están compuestas de avena, limón y frutos secos.
+                                Power Bites es el refrigerio saludable perfecto para los deportistas y personas activas que buscan una opción nutritiva y energética. Presentado en prácticos frascos de vidrio, nuestras galletas están elaboradas con proteínas de alta calidad, conservantes naturales y vitaminas esenciales para el bienestar de nuestros clientes. La deliciosa combinación de avena, limón y frutos secos proporciona una experiencia única en cada mordisco. Con Power Bites, nuestros clientes pueden disfrutar de un snack saludable y nutritivo que les ayudará a maximizar su rendimiento físico y a alcanzar sus metas deportivas.
                             </p>
                         </div>
                     </div>
-                    <div class="calculadora">
-                        <div class="instrucciones">
-                            <h1>
-                                BMI (Body Mass Index) Calculator
-                            </h1>
-                            <p>
-                                In order to calculate your BMI, please input your weight in kilograms and your height in meters:
-                            </p>
+                    <div class="calculadoras">
+                        <div class="calculadora">
+                            <div class="instrucciones">
+                                <h1>
+                                    Calculadora de IMC
+                                </h1>
+                                <p>
+                                    Para calcular tu IMC (Índice de Masa Corporal), porfavor ingresa tu peso en kilogramos y tu altura en metros:
+                                </p>
+                            </div>
+                            <div class="input_fields">
+                                <div class="field_container">
+                                    <label for="weight">Peso (kg): </label>
+                                    <input type="number", id="weight"/>
+                                </div>
+                                <div class="field_container">
+                                    <label for="height">Altura (m): </label>
+                                    <input type="number", id="height"/>
+                                </div>
+                                <div class="button_container">
+                                    <input type="submit" id="BMI_btn" value="Calcular IMC" onclick="BMI_calculator()">
+                                </div>
+                            </div>  
+                            <div class="output" id="output_container">
+                                Tu resultado aparecerá aquí
+                            </div>
                         </div>
-                        <div class="input_fields">
-                            <div class="field_container">
-                                <label for="weight">Weight (kg): </label>
-                                <input type= "text", id="weight"/>
+                        <div class="calculadora">
+                            <div class="instrucciones">
+                                <h1>
+                                    Calculadora de GET
+                                </h1>
+                                <p>
+                                    Para calcular tu GET (Gasto Energético Total), porfavor ingresa tu peso en kilogramos, tu altura en centímetros, tu edad en años, tu género, y selecciona un factor de actividad:
+                                </p>
                             </div>
-                            <div class="field_container">
-                                <label for="height">Height (m): </label>
-                                <input type= "text", id="height"/>
+                            <form class="input_fields">
+                                <div class="field_container">
+                                    <label for="peso">Peso (kg):</label>
+                                    <input type="number" id="peso" name="peso" required>
+                                </div>
+                                <div class="field_container">
+                                    <label for="altura">Altura (cm):</label>
+                                    <input type="number" id="altura" name="altura" required>
+                                </div>
+                                <div class="field_container">
+                                    <label for="edad">Edad:</label>
+                                    <input type="number" id="edad" name="edad" required>
+                                </div>
+                                <div class="field_container_radios">
+                                    <label for="genero">Género:</label>
+                                    <div class="radios">
+                                        <div class="radio">
+                                            <input type="radio" id="masculino" name="genero" value="masculino" required>
+                                            <label for="masculino">Masculino</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input type="radio" id="femenino" name="genero" value="femenino" required>
+                                            <label for="femenino">Femenino</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="field_container">
+                                    <label for="actividad">Factor de actividad:</label>
+                                    <select id="actividad" name="actividad" class="combobox">
+                                        <option value="1.2">Sedentario (Poco o nada de ejercicio)</option>
+                                        <option value="1.375">Ligero (Ejercicio 1-3 días semanales)</option>
+                                        <option value="1.55">Moderado (Ejercicio 3-5 días semanales)</option>
+                                        <option value="1.725">Activo (Ejercicio 6-7 días semanales)</option>
+                                        <option value="1.9">Muy activo (Ejercicio muy intenso dos veces al día)</option>
+                                    </select>
+                                </div>
+                                <div class="button_container">
+                                    <input type="button" value="Calcular GET" onclick="calcularGET()">
+                                </div>
+                            </form>
+                            <div class="output" id="resultado">
+                                Tu resultado aparecerá aquí
                             </div>
-                            <div class="button_container">
-                                <input type="submit" id="BMI_btn" value="Calculate BMI" onclick="BMI_calculator()">
-                            </div>
-                        </div>  
-                        <div class="output" id="output_container">
-                            Tu resultado aparecerá aquí
                         </div>
                     </div>
                 </div>
@@ -115,7 +170,7 @@
 
                 <div class="bloque2">
                     <p>
-                        Completa nuestra encuesta:
+                        Completa nuestra encuesta
                     </p>
                     <div class="imagescontainer">
                         <a href="https://docs.google.com/forms/d/e/1FAIpQLScvFxnQ78Re5kn7pcu8HxKkuo3wuN8K1wOk6T0zz_mJvCZJGQ/viewform?usp=sf_link " target="_blank">
@@ -128,10 +183,10 @@
 
                 <div class="bloque3">
                     <p>
-                        Para más información sobre BMI:
+                        Para más información:
                     </p>
                     <div class="imagescontainer">
-                        <a href="https://www.who.int/data/gho/data/themes/topics/topic-details/GHO/body-mass-index" target="_blank">
+                        <a href="https://www.who.int/es/news-room/fact-sheets/detail/healthy-diet" target="_blank">
                             <div class="circle">
                                 <img class="profpic" alt="" src="whologo3.png" />
                             </div>
